@@ -1,5 +1,5 @@
 # Voting website backend
-Here are just placeholders for now and will added when finished 
+Here are just placeholders for now and will added when finished <br>
 [Here](http://pollie-api.azurewebsites.net/index.html) is the website for backend.
 
 
