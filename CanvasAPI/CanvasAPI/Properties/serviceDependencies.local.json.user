@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2020-09-15T09:31:49.417527Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2020-09-15T09:32:07.0747201Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Type": "subscription",
+      "Value": "8b336e6a-c715-444d-aa69-cc9bcad4c63d"
+    },
+    "mssql1.resourceGroupName": {
+      "Type": "resourceGroup",
+      "Value": "msa-2020-p2"
+    }
+  }
+}

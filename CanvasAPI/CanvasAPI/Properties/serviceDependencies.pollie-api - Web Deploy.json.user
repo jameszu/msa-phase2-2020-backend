@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2020-09-15T09:34:16.9106489Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2020-09-15T08:45:50.6928099Z"
+    }
+  },
+  "parameters": {
+    "secrets1.resourceGroupName": {
+      "Type": "resourceGroup",
+      "Value": "msa-2020-p2"
+    },
+    "mssql1.subscriptionId": {
+      "Type": "subscription",
+      "Value": "8b336e6a-c715-444d-aa69-cc9bcad4c63d"
+    },
+    "mssql1.resourceGroupName": {
+      "Type": "resourceGroup",
+      "Value": "msa-2020-p2"
+    },
+    "secrets1.subscriptionId": {
+      "Type": "subscription",
+      "Value": "8b336e6a-c715-444d-aa69-cc9bcad4c63d"
+    }
+  }
+}

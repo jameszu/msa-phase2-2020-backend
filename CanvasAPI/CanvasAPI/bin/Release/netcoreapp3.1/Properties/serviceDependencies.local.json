@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets.user"
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/msa2020-james/databases/MSADB",
+      "type": "mssql.azure",
+      "connectionId": "sqlDatabase",
+      "secretStore": "LocalSecretsFile"
+    }
+  }
+}
