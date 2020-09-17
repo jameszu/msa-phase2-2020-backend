@@ -180,3 +180,5 @@ D:\All_documents\Github\msa-phase2-2020-backend\CanvasAPI\CanvasAPI\bin\Release\
 D:\All_documents\Github\msa-phase2-2020-backend\CanvasAPI\CanvasAPI\bin\Release\netcoreapp3.1\Azure.Extensions.AspNetCore.Configuration.Secrets.dll
 D:\All_documents\Github\msa-phase2-2020-backend\CanvasAPI\CanvasAPI\bin\Release\netcoreapp3.1\Azure.Identity.dll
 D:\All_documents\Github\msa-phase2-2020-backend\CanvasAPI\CanvasAPI\bin\Release\netcoreapp3.1\Azure.Security.KeyVault.Secrets.dll
+D:\All_documents\Github\msa-phase2-2020-backend\CanvasAPI\CanvasAPI\bin\Release\netcoreapp3.1\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\All_documents\Github\msa-phase2-2020-backend\CanvasAPI\CanvasAPI\bin\Release\netcoreapp3.1\ca\Hangfire.Core.resources.dll

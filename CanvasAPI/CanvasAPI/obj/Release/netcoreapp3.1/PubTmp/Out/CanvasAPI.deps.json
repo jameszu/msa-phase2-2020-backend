@@ -25,9 +25,9 @@
       "CanvasAPI/1.0.0": {
         "dependencies": {
           "Azure.Extensions.AspNetCore.Configuration.Secrets": "1.0.0",
-          "Azure.Identity": "1.1.1",
-          "Hangfire.AspNetCore": "1.7.12",
-          "Hangfire.Core": "1.7.12",
+          "Azure.Identity": "1.2.3",
+          "Hangfire.AspNetCore": "1.7.13",
+          "Hangfire.Core": "1.7.13",
           "Hangfire.MemoryStorage": "1.7.0",
           "Microsoft.AspNetCore.SignalR.Core": "1.1.0",
           "Microsoft.EntityFrameworkCore": "3.1.8",
@@ -35,7 +35,7 @@
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.8",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.8",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
-          "Swashbuckle.AspNetCore": "5.6.0",
+          "Swashbuckle.AspNetCore": "5.6.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -312,19 +312,20 @@
           "CanvasAPI.dll": {}
         }
       },
-      "Azure.Core/1.0.2": {
+      "Azure.Core/1.4.1": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
           "System.Buffers": "4.5.0",
           "System.Diagnostics.DiagnosticSource": "4.7.1",
           "System.Memory": "4.5.3",
           "System.Numerics.Vectors": "4.5.0",
+          "System.Text.Json": "4.7.2",
           "System.Threading.Tasks.Extensions": "4.5.3"
         },
         "runtime": {
           "lib/netstandard2.0/Azure.Core.dll": {
-            "assemblyVersion": "1.0.2.0",
-            "fileVersion": "1.0.220.11003"
+            "assemblyVersion": "1.4.1.0",
+            "fileVersion": "1.400.120.41802"
           }
         },
         "compile": {
@@ -346,10 +347,11 @@
           "lib/netstandard2.0/Azure.Extensions.AspNetCore.Configuration.Secrets.dll": {}
         }
       },
-      "Azure.Identity/1.1.1": {
+      "Azure.Identity/1.2.3": {
         "dependencies": {
-          "Azure.Core": "1.0.2",
-          "Microsoft.Identity.Client": "4.1.0",
+          "Azure.Core": "1.4.1",
+          "Microsoft.Identity.Client": "4.16.1",
+          "Microsoft.Identity.Client.Extensions.Msal": "2.12.0",
           "System.Memory": "4.5.3",
           "System.Security.Cryptography.ProtectedData": "4.5.0",
           "System.Text.Json": "4.7.2",
@@ -357,8 +359,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/Azure.Identity.dll": {
-            "assemblyVersion": "1.1.1.0",
-            "fileVersion": "1.100.120.11003"
+            "assemblyVersion": "1.2.3.0",
+            "fileVersion": "1.200.320.46101"
           }
         },
         "compile": {
@@ -367,7 +369,7 @@
       },
       "Azure.Security.KeyVault.Secrets/4.0.1": {
         "dependencies": {
-          "Azure.Core": "1.0.2",
+          "Azure.Core": "1.4.1",
           "System.Memory": "4.5.3",
           "System.Text.Json": "4.7.2",
           "System.Threading.Tasks.Extensions": "4.5.3"
@@ -382,31 +384,34 @@
           "lib/netstandard2.0/Azure.Security.KeyVault.Secrets.dll": {}
         }
       },
-      "Hangfire.AspNetCore/1.7.12": {
+      "Hangfire.AspNetCore/1.7.13": {
         "dependencies": {
-          "Hangfire.Core": "1.7.12"
+          "Hangfire.Core": "1.7.13"
         },
         "runtime": {
           "lib/netcoreapp3.0/Hangfire.AspNetCore.dll": {
-            "assemblyVersion": "1.7.12.0",
-            "fileVersion": "1.7.12.0"
+            "assemblyVersion": "1.7.13.0",
+            "fileVersion": "1.7.13.0"
           }
         },
         "compile": {
           "lib/netcoreapp3.0/Hangfire.AspNetCore.dll": {}
         }
       },
-      "Hangfire.Core/1.7.12": {
+      "Hangfire.Core/1.7.13": {
         "dependencies": {
           "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/Hangfire.Core.dll": {
-            "assemblyVersion": "1.7.12.0",
-            "fileVersion": "1.7.12.0"
+            "assemblyVersion": "1.7.13.0",
+            "fileVersion": "1.7.13.0"
           }
         },
         "resources": {
+          "lib/netstandard2.0/ca/Hangfire.Core.resources.dll": {
+            "locale": "ca"
+          },
           "lib/netstandard2.0/es/Hangfire.Core.resources.dll": {
             "locale": "es"
           },
@@ -441,7 +446,7 @@
       },
       "Hangfire.MemoryStorage/1.7.0": {
         "dependencies": {
-          "Hangfire.Core": "1.7.12"
+          "Hangfire.Core": "1.7.13"
         },
         "runtime": {
           "lib/netstandard1.3/Hangfire.MemoryStorage.dll": {
@@ -793,7 +798,7 @@
       "Microsoft.CSharp/4.7.0": {},
       "Microsoft.Data.SqlClient/1.1.3": {
         "dependencies": {
-          "Microsoft.Identity.Client": "4.1.0",
+          "Microsoft.Identity.Client": "4.16.1",
           "Microsoft.IdentityModel.JsonWebTokens": "5.5.0",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "5.5.0",
           "Microsoft.Win32.Registry": "4.5.0",
@@ -1117,11 +1122,12 @@
           "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {}
         }
       },
-      "Microsoft.Identity.Client/4.1.0": {
+      "Microsoft.Identity.Client/4.16.1": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
           "System.ComponentModel.TypeConverter": "4.3.0",
           "System.Net.NameResolution": "4.3.0",
+          "System.Private.Uri": "4.3.2",
           "System.Runtime.Serialization.Formatters": "4.3.0",
           "System.Runtime.Serialization.Json": "4.3.0",
           "System.Runtime.Serialization.Primitives": "4.3.0",
@@ -1130,12 +1136,27 @@
         },
         "runtime": {
           "lib/netcoreapp2.1/Microsoft.Identity.Client.dll": {
-            "assemblyVersion": "4.1.0.0",
-            "fileVersion": "4.1.0.0"
+            "assemblyVersion": "4.16.1.0",
+            "fileVersion": "4.16.1.0"
           }
         },
         "compile": {
           "ref/netcoreapp2.1/Microsoft.Identity.Client.dll": {}
+        }
+      },
+      "Microsoft.Identity.Client.Extensions.Msal/2.12.0": {
+        "dependencies": {
+          "Microsoft.Identity.Client": "4.16.1",
+          "System.Security.Cryptography.ProtectedData": "4.5.0"
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/Microsoft.Identity.Client.Extensions.Msal.dll": {
+            "assemblyVersion": "2.12.0.0",
+            "fileVersion": "2.12.0.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.1/Microsoft.Identity.Client.Extensions.Msal.dll": {}
         }
       },
       "Microsoft.IdentityModel.JsonWebTokens/5.5.0": {
@@ -1212,7 +1233,7 @@
         }
       },
       "Microsoft.NETCore.Platforms/2.1.2": {},
-      "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.NETCore.Targets/1.1.3": {},
       "Microsoft.OpenApi/1.2.3": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
@@ -1349,7 +1370,7 @@
       "Microsoft.Win32.Primitives/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.0"
         }
       },
@@ -1438,7 +1459,7 @@
       "runtime.native.System/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0"
+          "Microsoft.NETCore.Targets": "1.1.3"
         }
       },
       "runtime.native.System.Data.SqlClient.sni/4.4.0": {
@@ -1451,13 +1472,13 @@
       "runtime.native.System.IO.Compression/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0"
+          "Microsoft.NETCore.Targets": "1.1.3"
         }
       },
       "runtime.native.System.Net.Http/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0"
+          "Microsoft.NETCore.Targets": "1.1.3"
         }
       },
       "runtime.native.System.Security.Cryptography.Apple/4.3.0": {
@@ -1627,47 +1648,47 @@
           "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
-      "Swashbuckle.AspNetCore/5.6.0": {
+      "Swashbuckle.AspNetCore/5.6.1": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
-          "Swashbuckle.AspNetCore.Swagger": "5.6.0",
-          "Swashbuckle.AspNetCore.SwaggerGen": "5.6.0",
-          "Swashbuckle.AspNetCore.SwaggerUI": "5.6.0"
+          "Swashbuckle.AspNetCore.Swagger": "5.6.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "5.6.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "5.6.1"
         }
       },
-      "Swashbuckle.AspNetCore.Swagger/5.6.0": {
+      "Swashbuckle.AspNetCore.Swagger/5.6.1": {
         "dependencies": {
           "Microsoft.OpenApi": "1.2.3"
         },
         "runtime": {
           "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "assemblyVersion": "5.6.0.0",
-            "fileVersion": "5.6.0.0"
+            "assemblyVersion": "5.6.1.0",
+            "fileVersion": "5.6.1.0"
           }
         },
         "compile": {
           "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {}
         }
       },
-      "Swashbuckle.AspNetCore.SwaggerGen/5.6.0": {
+      "Swashbuckle.AspNetCore.SwaggerGen/5.6.1": {
         "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "5.6.0"
+          "Swashbuckle.AspNetCore.Swagger": "5.6.1"
         },
         "runtime": {
           "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "assemblyVersion": "5.6.0.0",
-            "fileVersion": "5.6.0.0"
+            "assemblyVersion": "5.6.1.0",
+            "fileVersion": "5.6.1.0"
           }
         },
         "compile": {
           "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
         }
       },
-      "Swashbuckle.AspNetCore.SwaggerUI/5.6.0": {
+      "Swashbuckle.AspNetCore.SwaggerUI/5.6.1": {
         "runtime": {
           "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
-            "assemblyVersion": "5.6.0.0",
-            "fileVersion": "5.6.0.0"
+            "assemblyVersion": "5.6.1.0",
+            "fileVersion": "5.6.1.0"
           }
         },
         "compile": {
@@ -1683,7 +1704,7 @@
       "System.Collections/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.0"
         }
       },
@@ -1907,7 +1928,7 @@
       "System.Console/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.IO": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Text.Encoding": "4.3.0"
@@ -1916,7 +1937,7 @@
       "System.Diagnostics.Debug/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.0"
         }
       },
@@ -1934,28 +1955,28 @@
       "System.Diagnostics.Tools/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Diagnostics.Tracing/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Globalization/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Globalization.Calendars/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Globalization": "4.3.0",
           "System.Runtime": "4.3.0"
         }
@@ -1989,7 +2010,7 @@
       "System.IO/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.0",
           "System.Text.Encoding": "4.3.0",
           "System.Threading.Tasks": "4.3.0"
@@ -2030,7 +2051,7 @@
       "System.IO.FileSystem/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.IO": "4.3.0",
           "System.IO.FileSystem.Primitives": "4.3.0",
           "System.Runtime": "4.3.0",
@@ -2127,7 +2148,7 @@
       "System.Net.Primitives/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.0",
           "System.Runtime.Handles": "4.3.0"
         }
@@ -2135,7 +2156,7 @@
       "System.Net.Sockets/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.IO": "4.3.0",
           "System.Net.Primitives": "4.3.0",
           "System.Runtime": "4.3.0",
@@ -2181,10 +2202,16 @@
           "System.Xml.XmlSerializer": "4.3.0"
         }
       },
+      "System.Private.Uri/4.3.2": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "Microsoft.NETCore.Targets": "1.1.3"
+        }
+      },
       "System.Reflection/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.IO": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
           "System.Runtime": "4.3.0"
@@ -2217,7 +2244,7 @@
       "System.Reflection.Extensions/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Reflection": "4.3.0",
           "System.Runtime": "4.3.0"
         }
@@ -2226,7 +2253,7 @@
       "System.Reflection.Primitives/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.0"
         }
       },
@@ -2239,7 +2266,7 @@
       "System.Resources.ResourceManager/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Globalization": "4.3.0",
           "System.Reflection": "4.3.0",
           "System.Runtime": "4.3.0"
@@ -2248,7 +2275,7 @@
       "System.Runtime/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0"
+          "Microsoft.NETCore.Targets": "1.1.3"
         }
       },
       "System.Runtime.Caching/4.5.0": {
@@ -2281,21 +2308,21 @@
       "System.Runtime.Extensions/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Runtime.Handles/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Runtime.InteropServices/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Reflection": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
           "System.Runtime": "4.3.0",
@@ -2502,7 +2529,7 @@
       "System.Text.Encoding/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.0"
         }
       },
@@ -2515,7 +2542,7 @@
       "System.Text.Encoding.Extensions/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.0",
           "System.Text.Encoding": "4.3.0"
         }
@@ -2547,7 +2574,7 @@
       "System.Threading.Tasks/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.0"
         }
       },
@@ -2555,7 +2582,7 @@
       "System.Threading.Timer/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "Microsoft.NETCore.Targets": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.0"
         }
       },
@@ -4245,12 +4272,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Azure.Core/1.0.2": {
+    "Azure.Core/1.4.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-CA6ZYcT6mWQacksB/9d+izqxSkxx4eS5EEhtad2dAUIb3YTsC/4vWZFfsOMn+4/F5HeYxIGLO3mvfL6AUytfXw==",
-      "path": "azure.core/1.0.2",
-      "hashPath": "azure.core.1.0.2.nupkg.sha512"
+      "sha512": "sha512-6LbGLiZwlU6SfOaINCfrQ+f91bRWZ8XvB90Qfm69x1t3z+5D4jmXnQiuPYPZcgtxFjPKA3IwyHGuDZRkSo1Urg==",
+      "path": "azure.core/1.4.1",
+      "hashPath": "azure.core.1.4.1.nupkg.sha512"
     },
     "Azure.Extensions.AspNetCore.Configuration.Secrets/1.0.0": {
       "type": "package",
@@ -4259,12 +4286,12 @@
       "path": "azure.extensions.aspnetcore.configuration.secrets/1.0.0",
       "hashPath": "azure.extensions.aspnetcore.configuration.secrets.1.0.0.nupkg.sha512"
     },
-    "Azure.Identity/1.1.1": {
+    "Azure.Identity/1.2.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TTB+Od1T9Okr1QNhXY0pTvuOsNtHqykgR1YcTt8o7jlsk2AWiuCilaOMqESTAK7a103e7YWVqjv9v5O7MJJlTg==",
-      "path": "azure.identity/1.1.1",
-      "hashPath": "azure.identity.1.1.1.nupkg.sha512"
+      "sha512": "sha512-FPqqvv9RFdl/OwZFrXZQafQsQcbQc7rV21H1DKuaG6obTyKv2ltM2UkbC3uoCJDMSwn56RuCxIbvU9nrpVuJLA==",
+      "path": "azure.identity/1.2.3",
+      "hashPath": "azure.identity.1.2.3.nupkg.sha512"
     },
     "Azure.Security.KeyVault.Secrets/4.0.1": {
       "type": "package",
@@ -4273,19 +4300,19 @@
       "path": "azure.security.keyvault.secrets/4.0.1",
       "hashPath": "azure.security.keyvault.secrets.4.0.1.nupkg.sha512"
     },
-    "Hangfire.AspNetCore/1.7.12": {
+    "Hangfire.AspNetCore/1.7.13": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ios/XlgILzLUQEVXa8tNTEGpDCdJxP5mdLk93pYl9z5zjotTfgopWmDZEnH7Y55YP9dWorv8UN4NXxGbwhiQ7w==",
-      "path": "hangfire.aspnetcore/1.7.12",
-      "hashPath": "hangfire.aspnetcore.1.7.12.nupkg.sha512"
+      "sha512": "sha512-bq7xyH4hM/1uiWsMO3k9EOAetyDCWxpYueOuqpAWjjO+00relnL1ReYV+x2tTeypdy5LQ853r0/pThJqdVH3Tw==",
+      "path": "hangfire.aspnetcore/1.7.13",
+      "hashPath": "hangfire.aspnetcore.1.7.13.nupkg.sha512"
     },
-    "Hangfire.Core/1.7.12": {
+    "Hangfire.Core/1.7.13": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xVpgaVt4IrNpWgd301FBa8RTcV0bDtZvdY7JzbGYcYTDnobYbMVFQCyXI9OYZ3g+hv9mD5IlRpmBPtPzKsaR+Q==",
-      "path": "hangfire.core/1.7.12",
-      "hashPath": "hangfire.core.1.7.12.nupkg.sha512"
+      "sha512": "sha512-9lElP4/7hUKYkyBIkBbraGNeeT/xdUeb3WPzPlJmKALj+M0Ngq6ahXnURaR1yuSanL+68sqt6/xOhnpXhfqsjA==",
+      "path": "hangfire.core/1.7.13",
+      "hashPath": "hangfire.core.1.7.13.nupkg.sha512"
     },
     "Hangfire.MemoryStorage/1.7.0": {
       "type": "package",
@@ -4602,12 +4629,19 @@
       "path": "microsoft.extensions.primitives/3.1.8",
       "hashPath": "microsoft.extensions.primitives.3.1.8.nupkg.sha512"
     },
-    "Microsoft.Identity.Client/4.1.0": {
+    "Microsoft.Identity.Client/4.16.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mrgnNTt8nsz9RcDINzTKsqy9uWLqhSuBaD090E4imgKg7FYOrwb3kW/dXG7dvJBUCMeXGG+1LbsDBWSu26ObiA==",
-      "path": "microsoft.identity.client/4.1.0",
-      "hashPath": "microsoft.identity.client.4.1.0.nupkg.sha512"
+      "sha512": "sha512-29w+h7IIu8c0+h1tkqfZaFWdTzjJm6GLjs9aNvWOK+b9RSIp1mvZl9VeyzV9qL6hBTqKxtXrd4493kX0UzFDuQ==",
+      "path": "microsoft.identity.client/4.16.1",
+      "hashPath": "microsoft.identity.client.4.16.1.nupkg.sha512"
+    },
+    "Microsoft.Identity.Client.Extensions.Msal/2.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FaF6/Rqg5h1c3/yYutIGMC4FFqvYHcx+ccdYiYeMlsB4yK/Qdkr/nWKbuoYCjg6Bp/ze7ZZhaXP6ZxItwaqRhQ==",
+      "path": "microsoft.identity.client.extensions.msal/2.12.0",
+      "hashPath": "microsoft.identity.client.extensions.msal.2.12.0.nupkg.sha512"
     },
     "Microsoft.IdentityModel.JsonWebTokens/5.5.0": {
       "type": "package",
@@ -4651,12 +4685,12 @@
       "path": "microsoft.netcore.platforms/2.1.2",
       "hashPath": "microsoft.netcore.platforms.2.1.2.nupkg.sha512"
     },
-    "Microsoft.NETCore.Targets/1.1.0": {
+    "Microsoft.NETCore.Targets/1.1.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
-      "path": "microsoft.netcore.targets/1.1.0",
-      "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+      "sha512": "sha512-3Wrmi0kJDzClwAC+iBdUBpEKmEle8FQNsCs77fkiOIw/9oYA07bL1EZNX0kQ2OMN3xpwvl0vAtOCYY3ndDNlhQ==",
+      "path": "microsoft.netcore.targets/1.1.3",
+      "hashPath": "microsoft.netcore.targets.1.1.3.nupkg.sha512"
     },
     "Microsoft.OpenApi/1.2.3": {
       "type": "package",
@@ -4924,33 +4958,33 @@
       "path": "sqlitepclraw.provider.dynamic_cdecl/2.0.2",
       "hashPath": "sqlitepclraw.provider.dynamic_cdecl.2.0.2.nupkg.sha512"
     },
-    "Swashbuckle.AspNetCore/5.6.0": {
+    "Swashbuckle.AspNetCore/5.6.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-V31O2VFPk6rLlln4dd95MpV+j6mNw6EAeh1Te5L6LJFomIAeMWV8Zc5M9XJaZp47tfYzYhbd8OC0ulLPl9DL5w==",
-      "path": "swashbuckle.aspnetcore/5.6.0",
-      "hashPath": "swashbuckle.aspnetcore.5.6.0.nupkg.sha512"
+      "sha512": "sha512-KHs0bkwGYE408MlbRuc/+jZIGBETAEDzlEs0cGKpemBrs2iTDj7ADfJa2VfLAQ+HlVR8lc2CXjRQmi/sPXAZbQ==",
+      "path": "swashbuckle.aspnetcore/5.6.1",
+      "hashPath": "swashbuckle.aspnetcore.5.6.1.nupkg.sha512"
     },
-    "Swashbuckle.AspNetCore.Swagger/5.6.0": {
+    "Swashbuckle.AspNetCore.Swagger/5.6.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-efmpgY8MRxgs6eDAOI3HwMS4baEpI6H9RgYVTER/prToXMnlxZPZb5hsco0QhzRhO4WCJdQ0gahztSMq2hPSVw==",
-      "path": "swashbuckle.aspnetcore.swagger/5.6.0",
-      "hashPath": "swashbuckle.aspnetcore.swagger.5.6.0.nupkg.sha512"
+      "sha512": "sha512-p/RZoLrBdTTfJnI55zLuf0t8QhN801HYUUyGupR2mW4Gs6e0V+HdQaev+ZVcXouSl0m0w3XiZ86hXkwE+sB9Zw==",
+      "path": "swashbuckle.aspnetcore.swagger/5.6.1",
+      "hashPath": "swashbuckle.aspnetcore.swagger.5.6.1.nupkg.sha512"
     },
-    "Swashbuckle.AspNetCore.SwaggerGen/5.6.0": {
+    "Swashbuckle.AspNetCore.SwaggerGen/5.6.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VbyBPfj8eXyFnt7Kz3KMSxSGz9CwyYtqQ26Vbt07KJQX0RNxIGiPz4eDqLsdBRDO1LUrNlenISrpf8JRG5JOtA==",
-      "path": "swashbuckle.aspnetcore.swaggergen/5.6.0",
-      "hashPath": "swashbuckle.aspnetcore.swaggergen.5.6.0.nupkg.sha512"
+      "sha512": "sha512-1C4Gn0BY+x3tdvYbSnlRxVP+3sbggfZyzGJooElCU5gDbktYmJPd0PiKt/lFq9BgD7LIDLi1s7BBXfRyFP6mEQ==",
+      "path": "swashbuckle.aspnetcore.swaggergen/5.6.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggergen.5.6.1.nupkg.sha512"
     },
-    "Swashbuckle.AspNetCore.SwaggerUI/5.6.0": {
+    "Swashbuckle.AspNetCore.SwaggerUI/5.6.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cqt40P856T60HzVuLw7JhuCf4VaQzBpv6e5PfQFGtASvk3vPjQMjjQJlsUjX6MNamTU+zBSQ/49EIbe4xbQyvg==",
-      "path": "swashbuckle.aspnetcore.swaggerui/5.6.0",
-      "hashPath": "swashbuckle.aspnetcore.swaggerui.5.6.0.nupkg.sha512"
+      "sha512": "sha512-SZCwiVCdeGrlDeY+AU6BfBlgY+KexaDqZ4si7qfErdGSmPPU30QtBnpMMGj13M8lYWZbFJSCXTXS2kBNJKsagg==",
+      "path": "swashbuckle.aspnetcore.swaggerui/5.6.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggerui.5.6.1.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",
@@ -5252,6 +5286,13 @@
       "sha512": "sha512-yDaJ2x3mMmjdZEDB4IbezSnCsnjQ4BxinKhRAaP6kEgL6Bb6jANWphs5SzyD8imqeC/3FxgsuXT6ykkiH1uUmA==",
       "path": "system.private.datacontractserialization/4.3.0",
       "hashPath": "system.private.datacontractserialization.4.3.0.nupkg.sha512"
+    },
+    "System.Private.Uri/4.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-o1+7RJnu3Ik3PazR7Z7tJhjPdE000Eq2KGLLWhqJJKXj04wrS8lwb1OFtDF9jzXXADhUuZNJZlPc98uwwqmpFA==",
+      "path": "system.private.uri/4.3.2",
+      "hashPath": "system.private.uri.4.3.2.nupkg.sha512"
     },
     "System.Reflection/4.3.0": {
       "type": "package",

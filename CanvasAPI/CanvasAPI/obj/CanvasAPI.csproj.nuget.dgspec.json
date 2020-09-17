@@ -47,15 +47,15 @@
             },
             "Azure.Identity": {
               "target": "Package",
-              "version": "[1.1.1, )"
+              "version": "[1.2.3, )"
             },
             "Hangfire.AspNetCore": {
               "target": "Package",
-              "version": "[1.7.12, )"
+              "version": "[1.7.13, )"
             },
             "Hangfire.Core": {
               "target": "Package",
-              "version": "[1.7.12, )"
+              "version": "[1.7.13, )"
             },
             "Hangfire.MemoryStorage": {
               "target": "Package",
@@ -89,7 +89,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[5.6.0, )"
+              "version": "[5.6.1, )"
             }
           },
           "imports": [

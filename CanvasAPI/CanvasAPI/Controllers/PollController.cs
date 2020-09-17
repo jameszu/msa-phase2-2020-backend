@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using CanvasAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 
 namespace CanvasAPI.Controllers
@@ -25,11 +26,16 @@ namespace CanvasAPI.Controllers
         {
             return await _context.Poll.ToListAsync();
         }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Poll>> GetPoll(int id)
         {
-            var the_poll = await _context.Poll.FindAsync(id);
+            if (!PollExist(id))
+            {
+                return NotFound();
+            }
 
+            var the_poll = await _context.Poll.Include(p => p.PollOption).FirstAsync(p => p.Poll_ID == id);
             if (the_poll == null)
             {
                 return NotFound();
@@ -37,6 +43,55 @@ namespace CanvasAPI.Controllers
 
             return the_poll;
         }
+
+        [Route("{id}/Stats")]
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<PollVoteStatsInfo>>> GetPollWithStats(int id)
+        {
+            if (!PollExist(id))
+            {
+                return NotFound();
+            }
+
+            var the_poll = await _context.Poll.Include(p => p.PollOption).FirstAsync(p => p.Poll_ID == id);
+            if (the_poll == null)
+            {
+                return NotFound();
+            }
+
+            int total_vote = 0;
+            foreach (var op in the_poll.PollOption)
+            {
+                op.Vote = _context.PollOption.Include(op => op.Vote).FirstAsync(o => o.Option_ID == op.Option_ID).Result.Vote;
+                total_vote += (op.Vote == null ? 0 : op.Vote.Count);
+            }
+
+            var result = the_poll.PollOption.Select(
+                x => new PollVoteStatsInfo
+                {
+                    Poll_ID = the_poll.Poll_ID,
+                    Pool_Title = the_poll.Pool_Title,
+                    Option_ID = x.Option_ID,
+                    Text = x.Text,
+                    Count = x.Vote == null ? 0 : x.Vote.Count,
+                    Percentage = (x.Vote == null ? 0 : x.Vote.Count) * 1.00 / (total_vote <= 0 ? 1 : total_vote)
+                }
+            ).ToList();
+
+            return result;
+        }
+
+        public class PollVoteStatsInfo
+        {
+            public int Poll_ID { get; set; }
+            public string Pool_Title { get; set; }
+            public int Option_ID { get; set; }
+            public string Text { get; set; }
+            public int Count { get; set; }
+            public double Percentage { get; set; }
+        }
+
+
         [HttpPost]
 
         public async Task<IActionResult> CreatePoll(Poll poll)

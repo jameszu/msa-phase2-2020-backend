@@ -180,3 +180,5 @@ D:\All_documents\Github\msa-phase2-2020-backend\CanvasAPI\CanvasAPI\bin\Debug\ne
 D:\All_documents\Github\msa-phase2-2020-backend\CanvasAPI\CanvasAPI\obj\Debug\netcoreapp3.1\CanvasAPI.csproj.CoreCompileInputs.cache
 D:\All_documents\Github\msa-phase2-2020-backend\CanvasAPI\CanvasAPI\obj\Debug\netcoreapp3.1\CanvasAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\All_documents\Github\msa-phase2-2020-backend\CanvasAPI\CanvasAPI\obj\Debug\netcoreapp3.1\CanvasAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\All_documents\Github\msa-phase2-2020-backend\CanvasAPI\CanvasAPI\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\All_documents\Github\msa-phase2-2020-backend\CanvasAPI\CanvasAPI\bin\Debug\netcoreapp3.1\ca\Hangfire.Core.resources.dll
